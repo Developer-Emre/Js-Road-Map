@@ -201,3 +201,32 @@
 // } else {
 //     console.log("Kaydınız Başarı İle Oluşturuldu! " + kadi);
 // }
+
+
+
+
+//Kullanıcının girdiği sayının karesi, küpü veya karekökünü buldurma uygulaması
+//Kullanıcıdan öncelikle hangi işlemi yapmak istenildiği sorulsun
+//Eğer cevap istediğimiz seçeneklerden birisi değilse yanlış seçim olduğunu sayıyı istemeden önce uyaralım
+//Daha sonra hangi sayı ile işlem yapılmak istendiği sorulsun
+//Sonuçta da seçimlerine göre console'a cevabı verelim
+//Burada karekökü için Math özelliğini kullanacağız.
+
+const islem=prompt("Yapmak istediğiniz işlemi lütfen seçiniz: \n Karesi için: 1 \n Küpü İçin: 2 \n Karekökü için: 3 \n")
+
+let sonuc
+if(islem==1 || islem==2 || islem==3){
+    const sayim=+prompt("Lütfen işlem yapmak istediğiniz sayıyı giriniz:")
+    if(islem==1){
+        sonuc=sayim**2
+        console.log(sayim+" sayısının karesi: "+ sonuc)
+    }else if(islem==2){
+        sonuc=sayim**3
+        console.log(sayim+" sayısının küpü: "+ sonuc)
+    }else{
+        sonuc=Math.sqrt(sayim)
+        console.log(sayim+" sayısının karekökü: "+ sonuc)
+    }
+}else{
+    console.log("1, 2 veya 3 seçeneklerinden birini seçmelisiniz.")
+}
